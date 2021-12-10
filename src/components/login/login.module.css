@@ -19,6 +19,20 @@ button{
     color: #d3154b;
 }
 
+.title{
+    font-size: 2rem;
+    margin: -1rem 0 0.6rem 0 ;
+    animation: animation 300ms ease-in;
+}
+
+@keyframes animation {
+    from{
+        transform: translateY(10px);
+    }
+    to{
+        transform: translateY(0px);
+    }
+}
 
 .loginBtn,
 .btn{
@@ -29,6 +43,7 @@ button{
 .loginBtn{
     display: flex;
     align-items: center;
+    justify-content: center;
     padding: 0.8rem 9rem;
     margin: 0.8em;
     text-align: center;
@@ -50,9 +65,6 @@ button{
     text-decoration: none;
 }
 
-.footer{
-    color: makerWhite;
-    font-size: .7em;
-    margin-top: 0.4em;
-}
+
+
 

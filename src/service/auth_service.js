@@ -8,6 +8,7 @@ class AuthService {
             provider = new GoogleAuthProvider();
         }
         const auth = getAuth();
+        console.log(auth);
         signInWithPopup(auth, provider)
         .then(result =>{
             const credential = provider.credentialFromResult(result);

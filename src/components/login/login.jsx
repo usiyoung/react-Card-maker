@@ -6,10 +6,11 @@ const Login = ({authService}) => {
         authService.login(e);
     }
     return(
-    <section className={styles.container}>
+        <section className={styles.container}>
         <div className={styles.logo}>
             <i className="far fa-check-circle"></i>
         </div>
+        <h1 className={styles.title}>Hello, Try making your card!</h1>     
         <section>
             <ul>
                 <li onClick={()=>{onLogin('Github')}} className={styles.loginBtn}>
@@ -20,13 +21,12 @@ const Login = ({authService}) => {
                     <i className="fab fa-google"></i>
                     <button className={styles.btn} >Google</button>
                 </li>
-                <li className={styles.loginBtn}>
+                <li onClick={()=>window.location.href="https://github.com/usiyoung/card-maker" }className={styles.loginBtn}>
                     <i className="fas fa-sign-out-alt"></i>
-                    <button className={styles.btn}>Log out</button>
+                    <button className={styles.btn}>Usiyoung Page</button>
                 </li>
             </ul>
         </section>
-        <p className={styles.footer}>Hello, Try making your card!</p>     
     </section>
     )
     };
