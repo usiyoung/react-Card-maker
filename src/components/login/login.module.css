@@ -1,0 +1,58 @@
+ul{
+    list-style: none;
+    padding: 0;
+}
+button{
+    background: transparent;
+    outline: none;
+    border: 0;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.logo{
+    font-size: 5em;
+    margin-bottom: 0.4em;
+    color: #d3154b;
+}
+
+
+.loginBtn,
+.btn{
+    cursor: pointer;
+    color: white;
+}
+
+.loginBtn{
+    display: flex;
+    align-items: center;
+    padding: 0.8rem 9rem;
+    margin: 0.8em;
+    text-align: center;
+    background: #2d2d2dc4;
+    border-radius: 1em;
+}
+
+.loginBtn:hover{
+    background-color: #2D2D2D;
+}
+
+.loginBtn:nth-child(3){
+    font-size: 0.8rem;
+    background: #E41750;
+}
+
+.loginBtn:nth-child(3)>a{
+    color: white;
+    text-decoration: none;
+}
+
+.footer{
+    color: makerWhite;
+    font-size: .7em;
+    margin-top: 0.4em;
+}
+

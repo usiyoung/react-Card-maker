@@ -11,8 +11,6 @@ class AuthService {
         signInWithPopup(auth, provider)
         .then(result =>{
             const credential = provider.credentialFromResult(result);
-            const token = credential.accessToken;
-            const user = result.user;
         }).catch((error)=>{
             const errorCode = error.code;
             const errorMessage = error.message;
