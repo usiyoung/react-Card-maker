@@ -11,10 +11,25 @@ button{
     outline: none;
     border: 0;
 }
+
+.backGround{
+    width: 100vw;
+    height: 100vh;
+    background: center / cover no-repeat url('../../image/background.jpg');
+    opacity: 0.6;
+    z-index: -9999;
+}
+
 .container{
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
+    height:  100vh;
+    width: 100vw;
+    position: absolute;
+    top: 0;
+    left: 0;
 }
 
 .logo{

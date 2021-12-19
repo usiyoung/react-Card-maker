@@ -1,0 +1,9 @@
+@value colors: "../../common/colors.module.css";
+@value makerWhite, makerShadow from colors;
+
+.editor{
+    flex-basis: 50%;
+    background: makerWhite;
+    border-radius: 0.7rem;
+    box-shadow: makerShadow;
+}

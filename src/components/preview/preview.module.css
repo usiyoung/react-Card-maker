@@ -1,0 +1,18 @@
+@value size: "../../common/size.module.css";
+@value mediaQuery from size;
+@value colors: "../../common/colors.module.css";
+@value makerWhite, makerShadow from colors;
+
+.preview{
+    flex-basis: 50%;
+    background: makerWhite;
+    border-radius: 0.7rem;
+    margin-left: 1.3rem;
+    box-shadow: makerShadow;
+}
+
+@media screen and (max-width: mediaQuery){
+    .preview{
+        margin: 1.3rem 0 0 0 ;
+    }
+}

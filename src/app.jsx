@@ -8,14 +8,11 @@ function App({authService}) {
 
   return (
       <div className={styles.container}>
-        <div className={styles.backGround}></div>
-        <div className={styles.section}>
           <Routes>
             <Route path="/*" element={<Login authService={authService}/>} />
             <Route path="/maker" element={<Maker authService={authService} />} />
           </Routes>
         </div>
-      </div>
   )
 }
 

@@ -1,6 +1,14 @@
 import React,{useEffect} from 'react';
 import styles from './login.module.css';
 import { useNavigate } from 'react-router-dom';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCheckCircle } from "@fortawesome/free-regular-svg-icons";
+import { faSignOutAlt} from '@fortawesome/free-solid-svg-icons';
+import {
+    faGithub,
+    faGoogle
+} from '@fortawesome/free-brands-svg-icons';
+  
 
 const Login = ({authService}) => {
     const nav = useNavigate();
@@ -27,28 +35,31 @@ const Login = ({authService}) => {
     })
 
     return(
+        <>
+        <div className={styles.backGround}></div>
         <section className={styles.container}>
             <div className={styles.logo}>
-                <i className="far fa-check-circle"></i>
+                <FontAwesomeIcon icon={faCheckCircle} />
             </div>
             <p className={styles.title}>welcome, Try making <span>your card!</span></p>     
             <section>
                 <ul>
                     <li onClick={()=>{onLogin('Github')}} className={`${styles.loginBtn} ${styles.git}`}>
-                        <i className='fab fa-github'></i>
+                    <FontAwesomeIcon icon={faGithub}/>
                         <button className={styles.btn} >Github</button>
                     </li>
                     <li onClick={()=>{onLogin('Google')}} className={`${styles.loginBtn} ${styles.google}`}>
-                        <i className="fab fa-google"></i>
+                    <FontAwesomeIcon icon={faGoogle} />
                         <button className={styles.btn} >Google</button>
                     </li>
                     <li onClick={()=>window.location.href="https://github.com/usiyoung/card-maker" }className={styles.loginBtn}>
-                        <i className="fas fa-sign-out-alt"></i>
+                        <FontAwesomeIcon icon={faSignOutAlt}/>
                         <button className={styles.btn}>Usiyoung Page</button>
                     </li>
                 </ul>
             </section>
         </section>
+        </>
     )
     };
 

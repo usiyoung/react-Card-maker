@@ -1,3 +1,62 @@
+@value size: "../../common/size.module.css";
+@value mediaQuery from size;
+@value colors: "../../common/colors.module.css";
+@value makerprimary,makersecondary,makerLightPink,makerWhite, makerShadow from colors;
+
+.container{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.nav{
+    display: flex;
+    background: makerWhite;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 0.7rem;
+    padding: 0.2rem 1rem;
+    margin: 1.3rem;
+    box-shadow: makerShadow;
+}
+
+.logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 0.3em;
+}
+
+.logoName{
+    font-weight: bold;
+}
+
+.logoIcon{
+    margin-right: 0.1em;
+    color: makerprimary;
+}
+
 .logout{
-    
+    border: 1px solid makerLightPink;
+    color: makerLightPink;
+    border-radius: 1em;
+    padding: 0.4rem 1.2rem;
+}
+
+.logout:hover{
+    border:1px solid makerprimary;
+    color: makerprimary;
+}
+
+.content{
+    display: flex;
+    flex:1;
+    margin: 1.3rem;
+}
+
+@media screen and (max-width: mediaQuery){
+    .content{
+        flex-direction: column;
+    }
 }
