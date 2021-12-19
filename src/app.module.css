@@ -1,12 +1,9 @@
-*{
-    position: relative;
-}
-
 .backGround{
     width: 100vw;
     height: 100vh;
-    background: center / cover no-repeat url('../src/image/img8.jpg');
+    background: center / cover no-repeat url('../src/image/background.jpg');
     opacity: 0.6;
+    z-index: -9999;
 }
 
 .section{
@@ -19,4 +16,3 @@
     justify-content: center;
     align-items: center;
 }
-

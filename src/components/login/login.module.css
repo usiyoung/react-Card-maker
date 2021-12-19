@@ -1,7 +1,11 @@
+@value colors: "../../common/colors.module.css";
+@value makerprimary,makersecondary,makerWhite,makerGrey,makerLightGrey,makerShadow from colors;
+
 ul{
     list-style: none;
     padding: 0;
 }
+
 button{
     background: transparent;
     outline: none;
@@ -16,13 +20,17 @@ button{
 .logo{
     font-size: 5em;
     margin-bottom: 0.4em;
-    color: #d3154b;
+    color: makerprimary;
 }
 
 .title{
-    font-size: 2rem;
+    font-weight: lighter;
+    font-size: 1rem;
     margin: -1rem 0 0.6rem 0 ;
     animation: animation 300ms ease-in;
+}
+.title > span{
+    font-weight: bold;
 }
 
 @keyframes animation {
@@ -37,7 +45,7 @@ button{
 .loginBtn,
 .btn{
     cursor: pointer;
-    color: white;
+    color: makerWhite;
 }
 
 .loginBtn{
@@ -47,24 +55,23 @@ button{
     padding: 0.8rem 9rem;
     margin: 0.8em;
     text-align: center;
-    background: #2d2d2dc4;
+    background: makerLightGrey;
     border-radius: 1em;
+    box-shadow: makerShadow;
 }
 
 .loginBtn:hover{
-    background-color: #2D2D2D;
+    background-color: makerGrey;
 }
 
 .loginBtn:nth-child(3){
     font-size: 0.8rem;
-    background: #E41750;
+    background: makersecondary;
 }
 
 .loginBtn:nth-child(3)>a{
-    color: white;
+    color: makerWhite;
     text-decoration: none;
 }
-
-
 
 

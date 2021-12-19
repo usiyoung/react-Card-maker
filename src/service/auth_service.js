@@ -1,24 +1,43 @@
-import { getAuth, GithubAuthProvider,GoogleAuthProvider,signInWithPopup } from "firebase/auth";
+import { 
+    getAuth, 
+    GithubAuthProvider,
+    GoogleAuthProvider,
+    signInWithPopup, 
+    onAuthStateChanged,
+    signOut} from "firebase/auth";
 class AuthService {
-    login(providerName){
-        let provider;
-        if(providerName === 'Github'){
-            provider = new GithubAuthProvider();
-        }else if(providerName === 'Google'){
-            provider = new GoogleAuthProvider();
+    constructor(){
+        this.firebaseAuth = getAuth();
+        this.googleProvider = new GoogleAuthProvider();
+        this.githubProvider = new GithubAuthProvider();
+    }
+
+    getProvider(providerName){
+        switch(providerName){
+            case 'Google':
+                return this.googleProvider;
+            case 'Github':
+                return this.githubProvider;
+            default:
+                throw new Error(`not supproted provider:${providerName}`)
         }
-        const auth = getAuth();
-        console.log(auth);
-        signInWithPopup(auth, provider)
-        .then(result =>{
-            const credential = provider.credentialFromResult(result);
-        }).catch((error)=>{
-            const errorCode = error.code;
-            const errorMessage = error.message;
-            const email = error.email;
-            const credential = GithubAuthProvider.credentialFromError(error);
+    }
+ 
+    login(providerName) {
+        const authProvider = this.getProvider(providerName);
+        return signInWithPopup(this.firebaseAuth, authProvider);
+    }
+    
+    logout(){
+        signOut(this.firebaseAuth);
+    }
+
+    onAuthChanged(onUserChanged){
+        onAuthStateChanged(this.firebaseAuth, (user)=>{
+            onUserChanged(user);
         })
     }
+   
 }
 
 export default AuthService;

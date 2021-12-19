@@ -1,9 +1,0 @@
-.link{
-    text-decoration: none;
-    color: rgba(0, 0, 0, 0.836);
-    font-size: 0.7rem;
-    cursor: pointer;
-}
-.link:hover{
-    color: #E41750;
-}
