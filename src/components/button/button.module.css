@@ -1,0 +1,19 @@
+@value colors: '../../common/colors.module.css';
+@value makerprimary,makerWhite from colors;
+
+.button{
+    width: 100%;
+    font-size: 0.7rem;
+    font-weight: bold;
+    color: makerprimary;
+    border: 1px solid makerprimary;
+    border-radius: 0.4em;
+    padding: 0.6em 1.8em;
+    transition: all 300ms ease-in;
+    margin-top: .2em;
+}
+
+.button:hover{
+    background: makerprimary;
+    color: makerWhite;
+}

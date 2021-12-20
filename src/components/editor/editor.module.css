@@ -6,4 +6,9 @@
     background: makerWhite;
     border-radius: 0.7rem;
     box-shadow: makerShadow;
+    padding: 0.3em
+}
+
+.title{
+    padding-left: 1em;
 }

@@ -1,0 +1,9 @@
+.button{
+    flex-basis:100%;
+    font-size: 0.7em;
+    font-weight: 700;
+    border: 1px solid #d6d6d6;
+    border-radius: 0.2em;
+    padding: 0.5em;
+    margin: 0.2em;
+}

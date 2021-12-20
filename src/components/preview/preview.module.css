@@ -9,6 +9,20 @@
     border-radius: 0.7rem;
     margin-left: 1.3rem;
     box-shadow: makerShadow;
+    padding: 0.3em;
+}
+
+.title{
+    padding-left: 1em;
+    margin-bottom: -0.4em;
+}
+
+.cards{
+    padding: 1em;
+    display: flex;
+    flex-wrap:wrap;
+    justify-content: center;
+    align-items: center;
 }
 
 @media screen and (max-width: mediaQuery){

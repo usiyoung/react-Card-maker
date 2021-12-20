@@ -1,0 +1,77 @@
+@value colors: "../../common/colors.module.css";
+@value makerShadow,makerLightGrey, makerWheat, makerWhite, makerBlack, makerLightWhite,makerLightPink,makerDeepShadow,makerprimary from colors;
+
+.card{
+    display: flex;
+    width: 40%;
+    margin: 1em;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1em;
+    padding: 1em;
+    padding-bottom: 2em;
+    border-radius: 1em;
+    box-shadow: makerShadow;
+}
+
+.avatar{
+    width: 8em;
+    height: 8em;
+    padding: 0.3em;
+}
+
+.info{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.name,
+.title,
+.company,
+.email,
+.message{
+    font-family: 'Roboto';
+    font-weight: 300;
+    margin: 0;
+    font-size: 0.8rem;
+    margin-bottom: 0.6em;
+    letter-spacing: 0.02em;
+    text-align: center;
+    
+}
+
+.name{
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+
+.title{
+    color: makerLightGrey ;
+}
+
+.company{
+    font-size: 0.6rem;
+    color: makerprimary;
+}
+
+.message{
+    color: makerLightGrey;
+    font-weight: bold;
+}
+
+.dark{
+    background: makerBlack;
+    color: makerLightWhite;
+}
+
+.light{
+    background: makerLightWhite;
+}
+
+.pink{
+    background:makerprimary;
+}
