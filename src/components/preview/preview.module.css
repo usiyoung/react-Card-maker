@@ -4,29 +4,38 @@
 @value makerWhite, makerShadow from colors;
 
 .preview{
+    position: relative;
     flex-basis: 50%;
     background: makerWhite;
     border-radius: 0.7rem;
     margin-left: 1.3rem;
     box-shadow: makerShadow;
     padding: 0.3em;
+    overflow-y: scroll;
+    height: 42em;
 }
 
 .title{
-    padding-left: 1em;
-    margin-bottom: -0.4em;
+    padding-left: 1em;;
+    position: fixed;
+    z-index: 1;
 }
 
 .cards{
     padding: 1em;
+    margin-top: 2em;
     display: flex;
     flex-wrap:wrap;
     justify-content: center;
-    align-items: center;
+    align-items: center; 
+    position: relative;
 }
 
 @media screen and (max-width: mediaQuery){
     .preview{
         margin: 1.3rem 0 0 0 ;
+    }
+    .cards{
+        height: 47em;
     }
 }

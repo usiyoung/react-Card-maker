@@ -1,14 +1,29 @@
 @value colors: "../../common/colors.module.css";
 @value makerWhite, makerShadow from colors;
-
+@value size: "../../common/size.module.css";
+@value mediaQuery from size;
 .editor{
     flex-basis: 50%;
     background: makerWhite;
     border-radius: 0.7rem;
     box-shadow: makerShadow;
-    padding: 0.3em
+    padding: 0.3em;
+    overflow-y: scroll;
+    height: 42em;
 }
 
 .title{
     padding-left: 1em;
+}
+
+.cards{
+    position: relative;
+    z-index: 2
+}
+
+
+@media screen and (max-width: mediaQuery){
+    .editor{
+        flex-basis: 0%
+    }
 }

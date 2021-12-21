@@ -17,7 +17,8 @@
     align-items: center;
     border-radius: 0.7rem;
     padding: 0.2rem 1rem;
-    margin: 1.3rem;
+    margin: 1rem;
+    margin-top: 0.8rem;
     margin-bottom: 0;
     box-shadow: makerShadow;
 }
@@ -61,5 +62,6 @@
 @media screen and (max-width: mediaQuery){
     .content{
         flex-direction: column;
+        margin-bottom: 1em;
     }
 }

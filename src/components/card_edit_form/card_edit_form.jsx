@@ -6,12 +6,13 @@ const CardEditForm = ({card}) => {
     const {
         id,
         name,
-        email,
+        stack,
         title,
         company,
         message,
-        fileName,
         theme,
+        githubURL,
+        fileName,
         fileURL
     } = card;
 
@@ -30,7 +31,8 @@ const CardEditForm = ({card}) => {
                 <option value="pink">Pink</option>
             </select>
             <input className={styles.input} type="text" name={title} value={title} />
-            <input className={styles.input} type="text" name={email} value={email} />
+            <input className={styles.input} type="text" name={stack} value={stack} />
+            <input className={styles.input} type="text" name={githubURL} value={githubURL} />
             <textarea className={styles.textarea} name="message" value={message}/>
             <Button className={styles.button} name="Delete" onClick={onSubmit} />
         </form>

@@ -1,0 +1,43 @@
+@value colors: '../../common/colors.module.css';
+@value makerBlack,makerWhite,makerprimary from colors;
+
+.form{
+    display:flex;
+    margin:0 auto;
+    flex-wrap: wrap;
+    width: 95%;
+    margin-bottom: 1em;
+}
+
+.input,
+.textarea,
+.select,
+.button,
+.fileInput{
+    font-family: 'Roboto';
+    font-size: 0.8em;
+    width: 100%;
+    border: 0;
+    padding: 0.5em;
+    border-bottom: 1px solid makerBlack;
+    border: 1px solid #d6d6d6;
+    border-radius: 0.2em;
+    margin: 0.2em;
+}
+
+.input,
+.select{
+    flex: 1 1 30%;
+}
+
+.input:focus,
+.textarea:focus,
+.select:focus,
+.button:focus{
+    outline: 0;
+    border: 1px solid makerprimary;
+}
+
+.textarea{
+    flex-basis: 100%;
+}

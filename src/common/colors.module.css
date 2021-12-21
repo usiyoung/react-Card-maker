@@ -1,12 +1,17 @@
 @value makerprimary: #d3154b;
 @value makersecondary: #E41750;
 @value makerLightPink: #ddcece;
+
 @value makerBlack: black;
 @value makerWhite: white;
 @value makerLightWhite: #f9f8f8;
+
 @value makerGrey: #2D2D2D;
 @value makerLightGrey: #2d2d2dc4;
+@value makerLighterGrey2: #b2b2b2;
+
 @value makerWheat: wheat;
+@value makerBlue: rgb(88, 88, 173);
 @value makerGreen: #385461;
 
 @value makerDeepShadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;

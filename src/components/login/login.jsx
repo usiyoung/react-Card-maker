@@ -8,7 +8,7 @@ import {
     faGithub,
     faGoogle
 } from '@fortawesome/free-brands-svg-icons';
-  
+import loginbackground from '../../image/background.jpg';
 
 const Login = ({authService}) => {
     const nav = useNavigate();
@@ -35,31 +35,32 @@ const Login = ({authService}) => {
     })
 
     return(
-        <>
-        <div className={styles.backGround}></div>
-        <section className={styles.container}>
-            <div className={styles.logo}>
-                <FontAwesomeIcon icon={faCheckCircle} />
-            </div>
-            <p className={styles.title}>welcome, Try making <span>your card!</span></p>     
-            <section>
-                <ul>
-                    <li onClick={()=>{onLogin('Github')}} className={`${styles.loginBtn} ${styles.git}`}>
-                    <FontAwesomeIcon icon={faGithub}/>
-                        <button className={styles.btn} >Github</button>
-                    </li>
-                    <li onClick={()=>{onLogin('Google')}} className={`${styles.loginBtn} ${styles.google}`}>
-                    <FontAwesomeIcon icon={faGoogle} />
-                        <button className={styles.btn} >Google</button>
-                    </li>
-                    <li onClick={()=>window.location.href="https://github.com/usiyoung/card-maker" }className={styles.loginBtn}>
-                        <FontAwesomeIcon icon={faSignOutAlt}/>
-                        <button className={styles.btn}>Usiyoung Page</button>
-                    </li>
-                </ul>
+        <div className={styles.login}>
+            <img className={styles.background}src={loginbackground}alt="" />
+            <section className={styles.container}>
+                <div className={styles.logo}>
+                    <FontAwesomeIcon icon={faCheckCircle} />
+                </div>
+                <p className={styles.title}>welcome, Try making <span>your card!</span></p>     
+                <section>
+                    <ul>
+                        <li onClick={()=>{onLogin('Github')}} className={`${styles.loginBtn} ${styles.git}`}>
+                        <FontAwesomeIcon icon={faGithub}/>
+                            <button className={styles.btn} >Github</button>
+                        </li>
+                        <li onClick={()=>{onLogin('Google')}} className={`${styles.loginBtn} ${styles.google}`}>
+                        <FontAwesomeIcon icon={faGoogle} />
+                            <button className={styles.btn} >Google</button>
+                        </li>
+                        <li onClick={()=>window.location.href="https://github.com/usiyoung/card-maker" }className={styles.loginBtn}>
+                            <FontAwesomeIcon icon={faSignOutAlt}/>
+                            <button className={styles.btn}>Usiyoung Page</button>
+                        </li>
+                    </ul>
+                </section>
             </section>
-        </section>
-        </>
+        </div>
+        
     )
     };
 

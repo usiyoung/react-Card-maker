@@ -1,6 +1,5 @@
 @value colors: "../../common/colors.module.css";
 @value makerprimary,makersecondary,makerWhite,makerGrey,makerLightGrey,makerShadow from colors;
-
 ul{
     list-style: none;
     padding: 0;
@@ -12,12 +11,13 @@ button{
     border: 0;
 }
 
-.backGround{
+.login{
+    height: 100vh;
+}
+
+.background{
     width: 100vw;
     height: 100vh;
-    background: center / cover no-repeat url('../../image/background.jpg');
-    opacity: 0.6;
-    z-index: -9999;
 }
 
 .container{

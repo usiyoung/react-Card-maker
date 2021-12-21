@@ -1,7 +1,13 @@
 @value colors: "../../common/colors.module.css";
-@value makerShadow,makerLightGrey, makerWheat, makerWhite, makerBlack, makerLightWhite,makerLightPink,makerDeepShadow,makerprimary from colors;
+@value makerShadow, makerLightGrey, makerWheat, makerWhite, makerBlack,makerLighterGrey2, makerBlue,makerLightWhite,makerLightPink,makerDeepShadow,makerprimary from colors;
+
+@value size: "../../common/size.module.css";
+@value mediaQuery from size;
 
 .card{
+    background-color: makerWhite;
+    max-width: 300px;
+    position: relative;
     display: flex;
     width: 40%;
     margin: 1em;
@@ -26,7 +32,6 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
 }
 
 .name,
@@ -35,13 +40,11 @@
 .email,
 .message{
     font-family: 'Roboto';
-    font-weight: 300;
     margin: 0;
     font-size: 0.8rem;
-    margin-bottom: 0.6em;
+    margin-bottom: 0.4em;
     letter-spacing: 0.02em;
-    text-align: center;
-    
+    text-align: center;   
 }
 
 .name{
@@ -51,27 +54,54 @@
 
 .title{
     color: makerLightGrey ;
+    font-weight: 400;
 }
 
 .company{
-    font-size: 0.6rem;
+    font-weight: 400;
     color: makerprimary;
 }
 
+.stack{
+    font-size: 0.6rem;
+    border: 1px solid transparent;
+    margin-top: 0.3em;
+    padding: 0.6em 2em;
+    border-image: linear-gradient(to right, makerLighterGrey2 0%, makerprimary 100%);
+    border-image-slice: 1;
+    border-radius: 1em;
+}
+
 .message{
-    color: makerLightGrey;
+    color: makerLighterGrey2;
     font-weight: bold;
+    margin: 1em;
+    height: 4em;
+}
+
+.githubURL{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 0.7em;
+    background: makerprimary;
+    border-radius: 1em 1em 1em 3em;
 }
 
 .dark{
     background: makerBlack;
-    color: makerLightWhite;
 }
 
-.light{
-    background: makerLightWhite;
+.blue{
+    background:makerBlue;
 }
 
 .pink{
-    background:makerprimary;
+    background: makerprimary;
+}
+
+@media screen and (max-width: mediaQuery){
+    .card{
+        width: 80%;
+    }
 }
