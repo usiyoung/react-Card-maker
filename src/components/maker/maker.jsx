@@ -10,8 +10,8 @@ import AvatarWoman from '../../image/avatar2.png';
 
 const Maker = ({authService}) => {
     const nav = useNavigate();
-    const [cards, setCards] = useState([
-      {
+    const [cards, setCards] = useState({
+      '1': {
         id: '1',
         name: 'usiyoung',
         company: 'usiyoungcompany',
@@ -23,7 +23,7 @@ const Maker = ({authService}) => {
         theme: 'dark',
         githubURL: 'https://github.com/usiyoung',
       },
-      {
+      '2': {
         id: '2',
         name: 'Georgiana Suclea',
         stack: 'C++',
@@ -35,7 +35,7 @@ const Maker = ({authService}) => {
         theme: 'blue',
         githubURL: 'https://github.com/usiyoung'
       },
-      {
+      '3': {
         id: '3',
         name: 'coco',
         stack: 'JAVA',
@@ -47,7 +47,8 @@ const Maker = ({authService}) => {
         theme: 'pink',
         githubURL: 'https://github.com/usiyoung'
       }
-    ]);
+    });
+
     const onLogout = () => {
         authService.logout();
       };
@@ -62,9 +63,20 @@ const Maker = ({authService}) => {
       }
     );
 
-    const addCard = (card) =>{
-      const updated = [...cards, card];
-      setCards(updated);
+    const createOrupdateCard = card =>{
+      setCards(cards => {
+        const updated = { ...cards };
+        updated[card.id] = card;
+        setCards(updated);
+      })
+    }
+
+    const deleteCard = card =>{
+      setCards(cards => {
+        const updated = { ...cards };
+        delete updated[card.id];
+        setCards(updated);
+      })
     }
 
     return(
@@ -80,7 +92,11 @@ const Maker = ({authService}) => {
           </nav>
 
           <div className={styles.content}>
-            <Editor cards={cards} addCard={addCard}/>
+            <Editor 
+              cards={cards} 
+              addCard={createOrupdateCard} 
+              updateCard={createOrupdateCard} 
+              deleteCard={deleteCard}/>
             <Preview cards={cards}/>
           </div>
         </div>      

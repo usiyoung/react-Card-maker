@@ -20,10 +20,3 @@
     position: relative;
     z-index: 2
 }
-
-
-@media screen and (max-width: mediaQuery){
-    .editor{
-        flex-basis: 0%
-    }
-}
