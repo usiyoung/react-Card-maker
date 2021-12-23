@@ -1,9 +1,8 @@
-import React, { useRef } from 'react';
+import React, { useRef,useState } from 'react';
 import Button from '../button/button';
-import ImageFileInput from '../image_file_input/image_file_input';
 import styles from './card_add_form.module.css';
 
-const CardAddForm = ({handleSubmit}) => {
+const CardAddForm = ({FileInput, handleSubmit}) => {
     const formRef = useRef();
     const nameRef = useRef();
     const companyRef = useRef();
@@ -12,7 +11,14 @@ const CardAddForm = ({handleSubmit}) => {
     const messageRef = useRef();
     const themeRef = useRef();
     const stackRef = useRef();
+    const [file, setFile] = useState({fileName: null, fileURL: null});
 
+    const onFileChange = file =>{
+        setFile({
+            fileName: file.name,
+            fileURL: file.url,
+        })
+    }
     const onSubmit = (event) =>{
         event.preventDefault();
         const card = {
@@ -24,14 +30,22 @@ const CardAddForm = ({handleSubmit}) => {
             message: messageRef.current.value  || '',
             theme: themeRef.current.value,
             stack: stackRef.current.value || '',
+            fileName: file.fileName || '',
+            fileURL: file.fileURL || '',
         }
+        
         formRef.current.reset();
+        setFile({fileName: null, fileURL: null});
         handleSubmit(card);
     }
     
     return(
         <form ref={formRef}className={styles.form}>
-            <ImageFileInput className={styles.fileInput}/>
+            <FileInput 
+            name={file.fileName}
+            className={styles.fileInput}
+            onFileChange={onFileChange}
+            />
             <input ref={nameRef} placeholder='name' className={styles.input} type="text" name='name' />
             <input ref={companyRef} placeholder='company' className={styles.input} type="text" name='company'/>
             <select ref={themeRef} className={styles.select} name="theme" >

@@ -8,7 +8,7 @@ import { faCheckCircle } from "@fortawesome/free-regular-svg-icons";
 import AvatarMan from '../../image/avatar1.png';
 import AvatarWoman from '../../image/avatar2.png';
 
-const Maker = ({authService}) => {
+const Maker = ({FileInput, authService}) => {
     const nav = useNavigate();
     const [cards, setCards] = useState({
       '1': {
@@ -93,6 +93,7 @@ const Maker = ({authService}) => {
 
           <div className={styles.content}>
             <Editor 
+              FileInput={FileInput}
               cards={cards} 
               addCard={createOrupdateCard} 
               updateCard={createOrupdateCard} 

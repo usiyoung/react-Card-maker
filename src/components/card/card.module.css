@@ -1,5 +1,5 @@
 @value colors: "../../common/colors.module.css";
-@value makerShadow, makerLightGrey, makerWheat, makerWhite, makerBlack,makerLighterGrey2, makerBlue,makerLightWhite,makerLightPink,makerDeepShadow,makerprimary from colors;
+@value makerShadow, makerLightGrey-first, makerWheat, makerWhite, makerBlack,makerLighterGrey-second, makerBlue,makerLightWhite,makerLightPink,makerDeepShadow,makerprimary from colors;
 
 @value size: "../../common/size.module.css";
 @value mediaQuery from size;
@@ -22,6 +22,7 @@
 }
 
 .avatar{
+    border-radius: 50%;
     width: 8em;
     height: 8em;
     padding: 0.3em;
@@ -53,7 +54,7 @@
 }
 
 .title{
-    color: makerLightGrey ;
+    color: makerLightGrey-first ;
     font-weight: 400;
 }
 
@@ -67,13 +68,13 @@
     border: 1px solid transparent;
     margin-top: 0.3em;
     padding: 0.6em 2em;
-    border-image: linear-gradient(to right, makerLighterGrey2 0%, makerprimary 100%);
+    border-image: linear-gradient(to right, makerLighterGrey-second 0%, makerprimary 100%);
     border-image-slice: 1;
     border-radius: 1em;
 }
 
 .message{
-    color: makerLighterGrey2;
+    color: makerLighterGrey-second;
     font-weight: bold;
     margin: 1em;
     height: 4em;

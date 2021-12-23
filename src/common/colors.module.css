@@ -7,8 +7,10 @@
 @value makerLightWhite: #f9f8f8;
 
 @value makerGrey: #2D2D2D;
-@value makerLightGrey: #2d2d2dc4;
-@value makerLighterGrey2: #b2b2b2;
+@value makerLightGrey-first: #2d2d2dc4;
+@value makerLighterGrey-second: #b2b2b2;
+@value makerLighterGrey-third: #d6d6d6;
+@value makerLighterGrey-fourth: #969595;
 
 @value makerWheat: wheat;
 @value makerBlue: rgb(88, 88, 173);
