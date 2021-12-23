@@ -1,27 +1,46 @@
 @value colors: '../../common/colors.module.css';
-@value makerLighterGrey-third,makerLighterGrey-fourth from colors;
+@value makerprimary,makerLightGrey-first,makerLighterGrey-third,makerLighterGrey-fourth from colors;
 .container{
-    width : 100%;
-    height: 100%;
     display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: border 100ms ease-in ;
 }
 
 .input{
     display: none;
 }
+
 .button{
-    flex-basis:100%;
-    font-size: 0.7em;
+    cursor: pointer;
+    font-size: 0.8em;
     font-weight: 700;
-    border: 1px solid makerLighterGrey-third;
     border-radius: 0.2em;
     padding: 0.5em;
-    margin: 0.2em;
-    cursor: pointer;
-    transition: border 100ms ease-in ;
 }
 
-.button:hover{
-    border: 1px solid makerLighterGrey-fourth;
+.button.grey{
+    border: 1px solid makerLighterGrey-third;
+    color: makerLightGrey-first;
+}
+
+.button.pink{
+    background: makerprimary;
+    color: white;
+}
+
+.loading{
+    width: 1.5em;
+    height: 1.5em;
+    border-radius:50%;
+    border: 2px solid makerLighterGrey-third;
+    border-top: 2px solid makerprimary;
+    animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+    0% {transform: rotate(0deg)}
+    100% {transform: rotate(360deg)}
 }
 
