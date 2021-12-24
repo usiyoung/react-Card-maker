@@ -5,58 +5,33 @@ import Preview from '../preview/preview';
 import styles from './maker.module.css';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCheckCircle } from "@fortawesome/free-regular-svg-icons";
-import AvatarMan from '../../image/avatar1.png';
-import AvatarWoman from '../../image/avatar2.png';
 
-const Maker = ({FileInput, authService}) => {
+const Maker = ({FileInput, authService, cardRepository}) => {
+    const navState = useNavigate().state;
     const nav = useNavigate();
-    const [cards, setCards] = useState({
-      '1': {
-        id: '1',
-        name: 'usiyoung',
-        company: 'usiyoungcompany',
-        title: 'Front-end',
-        stack: 'javascript',
-        fileName: 'usiyoung',
-        fileURL: AvatarWoman,
-        message: 'usiyoung is front-end developer. hi!',
-        theme: 'dark',
-        githubURL: 'https://github.com/usiyoung',
-      },
-      '2': {
-        id: '2',
-        name: 'Georgiana Suclea',
-        stack: 'C++',
-        company: 'apple',
-        title: 'IOS developer',
-        fileName: 'CComie',
-        fileURL: AvatarMan,
-        message: 'Georgiana Suclea is an android and IOS developer who worked at Apple for 6 years.',
-        theme: 'blue',
-        githubURL: 'https://github.com/usiyoung'
-      },
-      '3': {
-        id: '3',
-        name: 'coco',
-        stack: 'JAVA',
-        company: 'usiyoung company',
-        title: 'Back-end',
-        fileName: 'coco',
-        fileURL: AvatarWoman,
-        message: 'coco is 28 year old photographer from London with a real talent for what he does',
-        theme: 'pink',
-        githubURL: 'https://github.com/usiyoung'
-      }
-    });
+    const [userId, setUserId] = useState(navState && navState.id);
+    const [cards, setCards] = useState({});
 
     const onLogout = () => {
         authService.logout();
-      };
+    };
+
+    useEffect(() => {
+      if (!userId) {
+        return;
+      }
+      const stopSync = cardRepository.syncCards(userId, cards => {
+        setCards(cards);
+      });
+      return () => stopSync();
+    }, [userId, cardRepository]);
 
     useEffect(
       () => {
         authService.onAuthChanged((user) => {
-            if(!user){
+            if(user){
+              setUserId(user.uid);
+            }else{
               nav('/');
             }
         })
@@ -69,6 +44,7 @@ const Maker = ({FileInput, authService}) => {
         updated[card.id] = card;
         setCards(updated);
       })
+      cardRepository.saveCard(userId, card);
     }
 
     const deleteCard = card =>{
@@ -77,6 +53,7 @@ const Maker = ({FileInput, authService}) => {
         delete updated[card.id];
         setCards(updated);
       })
+      cardRepository.removeCard(userId, card);
     }
 
     return(

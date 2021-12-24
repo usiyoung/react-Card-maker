@@ -25,7 +25,7 @@ const Login = ({authService}) => {
         .login(event)
         .then((result) => {
             goToMaker(result.user.uid);
-          })
+        })
     };
 
     useEffect(()=>{

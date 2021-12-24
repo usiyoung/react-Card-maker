@@ -29,7 +29,7 @@ const CardAddForm = ({FileInput, handleSubmit}) => {
             githubURL: githubUrlRef.current.value  || '',
             message: messageRef.current.value  || '',
             theme: themeRef.current.value,
-            stack: stackRef.current.value || '',
+            stack: stackRef.current.value || 'perfect',
             fileName: file.fileName || '',
             fileURL: file.fileURL || '',
         }
@@ -49,7 +49,7 @@ const CardAddForm = ({FileInput, handleSubmit}) => {
             <input ref={nameRef} placeholder='name' className={styles.input} type="text" name='name' />
             <input ref={companyRef} placeholder='company' className={styles.input} type="text" name='company'/>
             <select ref={themeRef} className={styles.select} name="theme" >
-                <option value="blue">Blue</option>
+                <option defaultValue value="blue">Blue</option>
                 <option value="dark">Dark</option>
                 <option value="pink">Pink</option>
             </select>

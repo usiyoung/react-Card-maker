@@ -1,7 +1,6 @@
 import React from 'react';
 import styles from '../card/card.module.css';
 import AvatarMan from '../../image/avatar1.png';
-import AvatarWoman from '../../image/avatar2.png';
 
 const Card = ({card}) => {
     const {

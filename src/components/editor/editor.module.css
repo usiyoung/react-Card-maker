@@ -2,14 +2,15 @@
 @value makerWhite, makerShadow from colors;
 @value size: "../../common/size.module.css";
 @value mediaQuery from size;
+
 .editor{
     flex-basis: 50%;
     background: makerWhite;
     border-radius: 0.7rem;
     box-shadow: makerShadow;
     padding: 0.3em;
-    overflow-y: scroll;
-    height: 42em;
+    overflow-y: auto;
+    height: 42em
 }
 
 .title{
