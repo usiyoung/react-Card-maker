@@ -50,19 +50,23 @@
 }
 
 .name{
-    font-size: 1.3rem;
+    font-size: 1.6rem;
     font-weight: bold;
+    margin-bottom: 0.1rem;
 }
 
 .title{
     color: makerLightGrey-first ;
-    font-weight: 400;
+    font-weight: 300;
 }
 
 .company{
-    font-weight: 400;
+    font-weight: 700;
     color: makerprimary;
+    font-size: 0.5rem;
+    margin-bottom: 1em;
 }
+
 
 .stack{
     font-size: 0.6rem;

@@ -3,7 +3,6 @@ import Button from '../button/button';
 import styles from './card_edit_form.module.css';
 const CardEditForm = ({FileInput, card, updateCard, deleteCard}) => {
     const {
-        id,
         name,
         stack,
         title,
@@ -12,7 +11,6 @@ const CardEditForm = ({FileInput, card, updateCard, deleteCard}) => {
         theme,
         githubURL,
         fileName,
-        fileURL
     } = card;
 
     const formRef = useRef();
@@ -76,7 +74,7 @@ const CardEditForm = ({FileInput, card, updateCard, deleteCard}) => {
                 value={theme}
                 onChange={onChange} 
                 >
-                    <option defaultValue value="light">Light</option>
+                    <option defaultValue value="blue">Blue</option>
                     <option value="dark">Dark</option>
                     <option value="pink">Pink</option>
             </select>

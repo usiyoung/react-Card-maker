@@ -33,7 +33,7 @@ class AuthService {
     }
 
     onAuthChanged(onUserChanged){
-        onAuthStateChanged(this.firebaseAuth, (user)=>{
+        return onAuthStateChanged(this.firebaseAuth, (user)=>{
             onUserChanged(user);
         })
     }

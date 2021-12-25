@@ -7,8 +7,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCheckCircle } from "@fortawesome/free-regular-svg-icons";
 
 const Maker = ({FileInput, authService, cardRepository}) => {
-    const navState = useNavigate().state;
-    const nav = useNavigate();
+  const nav = useNavigate();
+    const navState = nav?.location?.state;
     const [userId, setUserId] = useState(navState && navState.id);
     const [cards, setCards] = useState({});
 
@@ -24,7 +24,7 @@ const Maker = ({FileInput, authService, cardRepository}) => {
         setCards(cards);
       });
       return () => stopSync();
-    }, [userId, cardRepository]);
+    }, [cardRepository, userId,cards]);
 
     useEffect(
       () => {

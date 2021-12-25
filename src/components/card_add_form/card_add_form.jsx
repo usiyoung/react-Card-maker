@@ -23,13 +23,13 @@ const CardAddForm = ({FileInput, handleSubmit}) => {
         event.preventDefault();
         const card = {
             id: Date.now(),
-            name: nameRef.current.value || '',
-            company: companyRef.current.value  || '',
-            title: titleRef.current.value  || '',
+            name: nameRef.current.value || 'name',
+            company: companyRef.current.value  || 'company',
+            title: titleRef.current.value  || 'position',
             githubURL: githubUrlRef.current.value  || '',
-            message: messageRef.current.value  || '',
+            message: messageRef.current.value  || 'Please enter a message.',
             theme: themeRef.current.value,
-            stack: stackRef.current.value || 'perfect',
+            stack: stackRef.current.value || 'stack',
             fileName: file.fileName || '',
             fileURL: file.fileURL || '',
         }
@@ -49,11 +49,11 @@ const CardAddForm = ({FileInput, handleSubmit}) => {
             <input ref={nameRef} placeholder='name' className={styles.input} type="text" name='name' />
             <input ref={companyRef} placeholder='company' className={styles.input} type="text" name='company'/>
             <select ref={themeRef} className={styles.select} name="theme" >
-                <option defaultValue value="blue">Blue</option>
+                <option  value="blue">Blue</option>
                 <option value="dark">Dark</option>
                 <option value="pink">Pink</option>
             </select>
-            <input ref={titleRef} placeholder='title' className={styles.input} type="text" name='title'  />
+            <input ref={titleRef} placeholder='position' className={styles.input} type="text" name='title'  />
             <input ref={stackRef} placeholder='stack' className={styles.input} type="text" name='stack'/>
             <input ref={githubUrlRef} placeholder='githubURL' className={styles.input} type="text" name='githubURL'  />
             <textarea ref={messageRef} placeholder='message' className={styles.textarea} name="message"/>
