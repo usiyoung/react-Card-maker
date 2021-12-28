@@ -5,7 +5,6 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBuilding } from "@fortawesome/free-regular-svg-icons";
 
 const Card = memo(({card}) => {
-    console.log('card')
     const {
         name,
         stack,
@@ -34,6 +33,7 @@ const Card = memo(({card}) => {
         </li>
     )
 });
+
 function getTheme(theme){
     switch(theme){
         case 'blue':
