@@ -23,7 +23,7 @@ const Card = memo(({card}) => {
             <img className={styles.avatar} src={DEFAULT_PHOTO} alt="profile" />
             <div className={styles.info}>
                 <p className={styles.name}>{name}</p>
-                <p className={styles.title}>{title}</p>
+                <p className={styles.title}>{title}</p> 
                 <p className={styles.company}>
                     <FontAwesomeIcon icon= {faBuilding}/> {company}</p>
                 <p className={styles.stack}>{stack}</p>
