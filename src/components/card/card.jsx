@@ -28,7 +28,7 @@ const Card = memo(({card}) => {
                     <FontAwesomeIcon icon= {faBuilding}/> {company}</p>
                 <p className={styles.stack}>{stack}</p>
                 <p className={styles.message}>{message}</p>
-                <a className={`${styles.githubURL} ${getTheme(theme)}`} href={githubURL} ></a>
+                <a href={githubURL} className={`${styles.githubURL} ${getTheme(theme)}`}> </a>
             </div>
         </li>
     )
