@@ -6,8 +6,6 @@
 
 ## learned
 
-<img width="1435" alt="스크린샷 2021-12-31 오후 4 36 42" src="https://user-images.githubusercontent.com/85566273/147811915-3ad1edbc-6e2b-45d1-8344-7caf518b410f.png">
-
 [DEMO](https://usiyoung-card-maker.netlify.app)
 
 ### 1. Function component
@@ -41,13 +39,5 @@
 - Autoprefix 지원
 - `모듈화`를 지원해 bem과 같은 긴 이름을 사용하지 않아도 됩니다. 이게 진짜 좋습니다
 
-## screen
-### maker page
-<img width="1435" alt="스크린샷 2021-12-31 오후 4 40 49" src="https://user-images.githubusercontent.com/85566273/147811922-b1fdabd9-2714-4712-9177-0b4beb8bea57.png">
-
-### media query
-|login|maker|
-|----|----|
-|<img width="414" height="300" alt="스크린샷 2021-12-31 오후 4 36 51" src="https://user-images.githubusercontent.com/85566273/147811921-49be12ab-a66e-4dce-ad36-912c5637a96c.png">|<img width="414" height="300" alt="스크린샷 2021-12-31 오후 4 41 00" src="https://user-images.githubusercontent.com/85566273/147811912-ed59f45a-4c99-4178-be58-dcbe0970b866.png">|
 
 
